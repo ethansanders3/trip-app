@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  background: #fafafa;
+  min-height: 100%;
+}
+
+html.dark,
+html.dark body,
+html.dark #root {
+  background: #09090b;
+}
+
+.display {
+  font-family: "Instrument Serif", "Times New Roman", serif;
+  font-feature-settings: "ss01";
+  letter-spacing: -0.01em;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  scrollbar-width: none;
+}
+
+@keyframes fadeup {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeup {
+  animation: fadeup 0.4s ease both;
+}
